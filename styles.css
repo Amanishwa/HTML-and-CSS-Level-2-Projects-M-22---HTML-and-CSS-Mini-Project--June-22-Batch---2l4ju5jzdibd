@@ -1,1 +1,416 @@
-
+/* Global Styles */
+:Root {
+    --Primary-Color: #E50914;
+    --Dark-Color: #141414;
+    --Light-Color: #F4f4f4;
+  }
+  
+  * {
+    Box-Sizing: Border-Box;
+    Margin: 0;
+    Padding: 0;
+  }
+  
+  Body {
+    Font-Family: 'Arial', Sans-Serif;
+    -Webkit-Font-Smoothing: Antialiased;
+    Background: #000;
+    Color: #999;
+  }
+  
+  Ul {
+    List-Style: None;
+  }
+  
+  H1,
+  H2,
+  H3,
+  H4 {
+    Color: #Fff;
+  }
+  
+  A {
+    Color: #Fff;
+    Text-Decoration: None;
+  }
+  
+  P {
+    Margin: 0.5rem 0;
+  }
+  
+  Img {
+    Width: 100%;
+  }
+  
+  .Showcase {
+    Width: 100%;
+    Height: 93vh;
+    Position: Relative;
+    Background: Url('https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg') No-Repeat Center Center/Cover;
+  }
+  
+  .Showcase::After {
+    Content: '';
+    Position: Absolute;
+    Top: 0;
+    Left: 0;
+    Width: 100%;
+    Height: 100%;
+    Z-Index: 1;
+    Background: Rgba(0, 0, 0, 0.6);
+    Box-Shadow: Inset 120px 100px 250px #000000, Inset -120px -100px 250px #000000;
+  }
+  
+  .Showcase-Top {
+    Position: Relative;
+    Z-Index: 2;
+    Height: 90px;
+  }
+  
+  .Showcase-Top Img {
+    Width: 170px;
+    Position: Absolute;
+    Top: 50%;
+    Left: 50%;
+    Transform: Translate(-50%, -50%);
+    Margin-Left: 0;
+  }
+  
+  .Showcase-Top A {
+    Position: Absolute;
+    Top: 50%;
+    Right: 0;
+    Transform: Translate(-50%, -50%);
+  }
+  
+  .Showcase-Content {
+    Position: Relative;
+    Z-Index: 2;
+    Width: 65%;
+    Margin: Auto;
+    Display: Flex;
+    Flex-Direction: Column;
+    Justify-Content: Center;
+    Align-Items: Center;
+    Text-Align: Center;
+    Margin-Top: 9rem;
+  }
+  
+  .Showcase-Content H1 {
+    Font-Weight: 700;
+    Font-Size: 5.2rem;
+    Line-Height: 1.1;
+    Margin: 0 0 2rem;
+  }
+  
+  .Showcase-Content P {
+    Text-Transform: Uppercase;
+    Color: #Fff;
+    Font-Weight: 400;
+    Font-Size: 1.9rem;
+    Line-Height: 1.25;
+    Margin: 0 0 2rem;
+  }
+  
+  /* Tabs */
+  .Tabs {
+    Background: Var(--Dark-Color);
+    Padding-Top: 1rem;
+    Border-Bottom: 3px Solid #3d3d3d;
+    Border-Right: None;
+  }
+  
+  .Tabs .Container {
+    Display: Grid;
+    Grid-Template-Columns: Repeat(3, 1fr);
+    Grid-Gap: 1rem;
+    Align-Items: Center;
+    Justify-Content: Center;
+    Text-Align: Center;
+  }
+  
+  .Tabs P {
+    Font-Size: 1.2rem;
+    Padding-Top: 0.5rem;
+  }
+  
+  .Tabs .Container > Div {
+    Padding: 1.5rem 0;
+  }
+  
+  .Tabs .Container > Div:hover {
+    Color: #Fff;
+    Cursor: Pointer;
+  }
+  
+  .Tab-Border {
+    Border-Bottom: Var(--Primary-Color) 4px Solid;
+  }
+  
+  /* Tab Content */
+  .Tab-Content {
+    Padding: 3rem 0;
+    Background: #000;
+    Color: #Fff;
+  }
+  
+  /* Hide Initial Content */
+  #Tab-1-Content,
+  #Tab-2-Content,
+  #Tab-3-Content {
+    Display: None;
+    Opacity: 0;
+  }
+  
+  .Show {
+    Display: Block !Important;
+    Opacity: 1 !Important;
+    Transition: All 1000 Ease-In;
+  }
+  
+  #Tab-1-Content .Tab-1-Content-Inner {
+    Display: Grid;
+    Grid-Template-Columns: Repeat(2, 1fr);
+    Grid-Gap: 2rem;
+    Align-Items: Center;
+    Justify-Content: Center;
+  }
+  
+  #Tab-2-Content .Tab-2-Content-Top {
+    Display: Grid;
+    Grid-Template-Columns: 2fr 1fr;
+    Grid-Gap: 1rem;
+    Justify-Content: Center;
+    Align-Items: Center;
+  }
+  
+  #Tab-2-Content .Tab-2-Content-Bottom {
+    Margin-Top: 2rem;
+    Display: Grid;
+    Grid-Template-Columns: Repeat(3, 1fr);
+    Grid-Gap: 2rem;
+    Text-Align: Center;
+  }
+  
+  .Table {
+    Width: 100%;
+    Margin-Top: 2rem;
+    Border-Collapse: Collapse;
+    Border-Spacing: 0;
+  }
+  
+  .Table Thead Th {
+    Text-Transform: Uppercase;
+    Padding: 0.8rem;
+  }
+  
+  .Table Tbody {
+    Display: Table-Row-Group;
+    Vertical-Align: Middle;
+    Border-Color: Inherit;
+  }
+  
+  .Table Tbody Tr Td {
+    Color: #999;
+    Padding: 0.8rem 1.2rem;
+    Text-Align: Center;
+  }
+  
+  .Table Tbody Tr Td:first-Child {
+    Text-Align: Left;
+  }
+  
+  .Table Tbody Tr:nth-Child(Odd) {
+    Background: #222;
+  }
+  
+  .Footer {
+    Max-Width: 70%;
+    Margin: 1rem Auto;
+    Overflow: Auto;
+  }
+  
+  .Footer,
+  .Footer A {
+    Color: #999;
+    Font-Size: 0.9rem;
+  }
+  
+  .Footer P {
+    Margin-Bottom: 1.5rem;
+  }
+  
+  .Footer .Footer-Cols {
+    Display: Grid;
+    Grid-Template-Columns: Repeat(4, 1fr);
+    Grid-Gap: 2rem;
+  }
+  
+  .Footer Li {
+    Line-Height: 1.9;
+  }
+  
+  .Footer .Lang-Select {
+    Margin-Top: 2rem;
+    Color: #999;
+    Background-Color: #000;
+    Background-Image: None;
+    Border: 1px Solid #333;
+    Padding: 1rem 1.2rem;
+    Border-Radius: 5px;
+  }
+  
+  /* Container */
+  .Container {
+    Max-Width: 70%;
+    Margin: Auto;
+    Overflow: Hidden;
+    Padding: 0 2rem;
+  }
+  
+  /* Text Styles */
+  .Text-Xl {
+    Font-Size: 2rem;
+  }
+  
+  .Text-Lg {
+    Font-Size: 1.8rem;
+    Margin-Bottom: 1rem;
+  }
+  
+  .Text-Md {
+    Margin-Bottom: 1.5rem;
+    Font-Size: 1.2rem;
+  }
+  
+  .Text-Center {
+    Text-Align: Center;
+  }
+  
+  .Text-Dark {
+    Color: #999;
+  }
+  
+  /* Buttons */
+  .Btn {
+    Display: Inline-Block;
+    Background: Var(--Primary-Color);
+    Color: #Fff;
+    Padding: 0.4rem 1.3rem;
+    Font-Size: 1rem;
+    Text-Align: Center;
+    Border: None;
+    Cursor: Pointer;
+    Margin-Right: 0.5rem;
+    Transition: Opacity 0.2s Ease-In;
+    Outline: None;
+    Box-Shadow: 0 1px 0 Rgba(0, 0, 0, 0.45);
+    Border-Radius: 2px;
+  }
+  
+  .Btn:hover {
+    Opacity: 0.9;
+  }
+  
+  .Btn-Rounded {
+    Border-Radius: 5px;
+  }
+  
+  .Btn-Xl {
+    Font-Size: 2rem;
+    Padding: 1.5rem 2.1rem;
+    Text-Transform: Uppercase;
+  }
+  
+  .Btn-Lg {
+    Font-Size: 1rem;
+    Padding: 0.8rem 1.3rem;
+    Text-Transform: Uppercase;
+  }
+  
+  .Btn-Icon {
+    Margin-Left: 1rem;
+  }
+  
+  @Media (Max-Width: 960px) {
+  
+      .Showcase {
+      Height: 70vh;
+    }
+  
+    .Hide-Sm {
+      Display: None;
+    }
+  
+    .Showcase-Top Img {
+      Top: 30%;
+      Left: 5%;
+      Transform: Translate(0);
+    }
+  
+    .Showcase-Content H1 {
+      Font-Size: 3.7rem;
+      Line-Height: 1;
+    }
+  
+    .Showcase-Content P {
+      Font-Size: 1.5rem;
+    }
+  
+    .Footer .Footer-Cols {
+      Grid-Template-Columns: Repeat(2, 1fr);
+    }
+  
+    .Btn-Xl {
+      Font-Size: 1.5rem;
+      Padding: 1.4rem 2rem;
+      Text-Transform: Uppercase;
+    }
+  
+    .Text-Xl {
+      Font-Size: 1.5rem;
+    }
+  
+    .Text-Lg {
+      Font-Size: 1.3rem;
+      Margin-Bottom: 1rem;
+    }
+  
+    .Text-Md {
+      Margin-Bottom: 1rem;
+      Font-Size: 1.2rem;
+    }
+  }
+  
+  @Media (Max-Width: 700px) {
+    .Showcase::After {
+      Background: Rgba(0, 0, 0, 0.6);
+      Box-Shadow: Inset 80px 80px 150px #000000, Inset -80px -80px 150px #000000;
+    }
+  
+    .Showcase-Content H1 {
+      Font-Size: 2.5rem;
+      Line-Height: 1;
+    }
+  
+    .Showcase-Content P {
+      Font-Size: 1rem;
+    }
+  
+    #Tab-1-Content .Tab-1-Content-Inner {
+      Grid-Template-Columns: 1fr;
+      Text-Align: Center;
+    }
+  
+    #Tab-2-Content .Tab-2-Content-Top {
+      Display: Block;
+      Text-Align: Center;
+    }
+  
+    #Tab-2-Content .Tab-2-Content-Bottom {
+      Margin-Top: 2rem;
+      Display: Grid;
+      Grid-Template-Columns: 1fr;
+      Grid-Gap: 2rem;
+      Text-Align: Center;
+    }
